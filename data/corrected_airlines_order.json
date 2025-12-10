@@ -1,0 +1,301 @@
+{
+  "AirlinesOrder": {
+    "GatewayType": "Midtrans",
+    "PaymentType": "WLTGopay",
+    "CustomerDetail": {
+      "Number": "generated-customer-id",
+      "FirstName": "John",
+      "LastName": "Doe",
+      "Email": "john@doe.com",
+      "Phone": "081234567890",
+      "BillingAddress": {
+        "FirstName": "John",
+        "LastName": "Doe",
+        "Phone": "081234567890",
+        "Address": "Baker Street 97th",
+        "City": "Jakarta",
+        "Postcode": "16000",
+        "CountryCode": "IDN"
+      }
+    },
+    "OrderType": "Airline",
+    "Message": "Here's your product details.",
+    "Locale": "en-GB",
+    "TransactionDetails": {
+      "OrderID": "generated-order-id",
+      "GrossAmt": 21597,
+      "Currency": "USD"
+    },
+    "Items": [
+      {
+        "PNRNumber": "QW3P0I",
+        "JourneyType": "roundtrip",
+        "PassengerInfo": [
+          {
+            "PassengerId": "p001",
+            "Name": "Farbound Smith Jr",
+            "TicketNumber": "0741234567890",
+            "PassengerType": "adult",
+            "DateOfBirth": "1985-03-15"
+          },
+          {
+            "PassengerId": "p002",
+            "Name": "Nick Jones",
+            "TicketNumber": "0741234567891",
+            "PassengerType": "adult",
+            "DateOfBirth": "1988-07-22"
+          }
+        ],
+        "FlightInfo": [
+          {
+            "ConnectionId": "c001",
+            "SegmentId": "s001",
+            "FlightNumber": "KL9123",
+            "AircraftType": "Boeing 737",
+            "DepartureAirport": {
+              "AirportCode": "SFO",
+              "City": "San Francisco",
+              "Terminal": "T4",
+              "Gate": "G8"
+            },
+            "ArrivalAirport": {
+              "AirportCode": "SLC",
+              "City": "Salt Lake City",
+              "Terminal": "T2",
+              "Gate": "A6"
+            },
+            "FlightSchedule": {
+              "DepartureTime": "2016-01-02T19:45",
+              "ArrivalTime": "2016-01-02T21:45"
+            },
+            "TravelClass": "business"
+          },
+          {
+            "ConnectionId": "c002",
+            "SegmentId": "s002",
+            "FlightNumber": "KL321",
+            "AircraftType": "Boeing 747-200",
+            "DepartureAirport": {
+              "AirportCode": "SLC",
+              "City": "Salt Lake City",
+              "Terminal": "T1",
+              "Gate": "A2"
+            },
+            "ArrivalAirport": {
+              "AirportCode": "AMS",
+              "City": "Amsterdam",
+              "Terminal": "T1",
+              "Gate": "G33"
+            },
+            "FlightSchedule": {
+              "DepartureTime": "2016-01-02T22:50",
+              "ArrivalTime": "2016-01-03T20:45"
+            },
+            "TravelClass": "business"
+          },
+          {
+            "ConnectionId": "c003",
+            "SegmentId": "s003",
+            "FlightNumber": "KL322",
+            "AircraftType": "Boeing 747-200",
+            "DepartureAirport": {
+              "AirportCode": "AMS",
+              "City": "Amsterdam",
+              "Terminal": "T1",
+              "Gate": "G33"
+            },
+            "ArrivalAirport": {
+              "AirportCode": "SLC",
+              "City": "Salt Lake City",
+              "Terminal": "T1",
+              "Gate": "A2"
+            },
+            "FlightSchedule": {
+              "DepartureTime": "2016-01-10T10:30",
+              "ArrivalTime": "2016-01-10T12:30"
+            },
+            "TravelClass": "economy"
+          },
+          {
+            "ConnectionId": "c004",
+            "SegmentId": "s004",
+            "FlightNumber": "KL9124",
+            "AircraftType": "Boeing 737",
+            "DepartureAirport": {
+              "AirportCode": "SLC",
+              "City": "Salt Lake City",
+              "Terminal": "T2",
+              "Gate": "A6"
+            },
+            "ArrivalAirport": {
+              "AirportCode": "SFO",
+              "City": "San Francisco",
+              "Terminal": "T4",
+              "Gate": "G8"
+            },
+            "FlightSchedule": {
+              "DepartureTime": "2016-01-10T14:00",
+              "ArrivalTime": "2016-01-10T16:00"
+            },
+            "TravelClass": "economy"
+          }
+        ],
+        "PassengerSegmentInfo": [
+          {
+            "SegmentId": "s001",
+            "PassengerId": "p001",
+            "Seat": "12A",
+            "SeatType": "Business"
+          },
+          {
+            "SegmentId": "s001",
+            "PassengerId": "p002",
+            "Seat": "12B",
+            "SeatType": "Business"
+          },
+          {
+            "SegmentId": "s002",
+            "PassengerId": "p001",
+            "Seat": "73A",
+            "SeatType": "World Business",
+            "ProductInfo": [
+              {
+                "Title": "Lounge",
+                "Value": "Complimentary lounge access"
+              },
+              {
+                "Title": "Baggage",
+                "Value": "1 extra bag 50lbs"
+              }
+            ]
+          },
+          {
+            "SegmentId": "s002",
+            "PassengerId": "p002",
+            "Seat": "73B",
+            "SeatType": "World Business",
+            "ProductInfo": [
+              {
+                "Title": "Lounge",
+                "Value": "Complimentary lounge access"
+              },
+              {
+                "Title": "Baggage",
+                "Value": "1 extra bag 50lbs"
+              }
+            ]
+          },
+          {
+            "SegmentId": "s003",
+            "PassengerId": "p001",
+            "Seat": "45C",
+            "SeatType": "Economy"
+          },
+          {
+            "SegmentId": "s003",
+            "PassengerId": "p002",
+            "Seat": "45D",
+            "SeatType": "Economy"
+          },
+          {
+            "SegmentId": "s004",
+            "PassengerId": "p001",
+            "Seat": "23A",
+            "SeatType": "Economy"
+          },
+          {
+            "SegmentId": "s004",
+            "PassengerId": "p002",
+            "Seat": "23B",
+            "SeatType": "Economy"
+          }
+        ],
+        "PassengerPricing": [
+          {
+            "PassengerId": "p001",
+            "BasePrice": 10000,
+            "Tax": 0,
+            "TotalPrice": 10000,
+            "Currency": "USD",
+            "PriceBreakdown": [
+              {
+                "SegmentId": "s001",
+                "Amount": 5000,
+                "Description": "Business class SFO-SLC"
+              },
+              {
+                "SegmentId": "s002",
+                "Amount": 5000,
+                "Description": "Business class SLC-AMS"
+              },
+              {
+                "SegmentId": "s003",
+                "Amount": 0,
+                "Description": "Economy class AMS-SLC (included in roundtrip)"
+              },
+              {
+                "SegmentId": "s004",
+                "Amount": 0,
+                "Description": "Economy class SLC-SFO (included in roundtrip)"
+              }
+            ]
+          },
+          {
+            "PassengerId": "p002",
+            "BasePrice": 10000,
+            "Tax": 0,
+            "TotalPrice": 10000,
+            "Currency": "USD",
+            "PriceBreakdown": [
+              {
+                "SegmentId": "s001",
+                "Amount": 5000,
+                "Description": "Business class SFO-SLC"
+              },
+              {
+                "SegmentId": "s002",
+                "Amount": 5000,
+                "Description": "Business class SLC-AMS"
+              },
+              {
+                "SegmentId": "s003",
+                "Amount": 0,
+                "Description": "Economy class AMS-SLC (included in roundtrip)"
+              },
+              {
+                "SegmentId": "s004",
+                "Amount": 0,
+                "Description": "Economy class SLC-SFO (included in roundtrip)"
+              }
+            ]
+          }
+        ],
+        "PriceInfo": [
+          {
+            "Title": "Fuel surcharge",
+            "Amount": 1597,
+            "Currency": "USD"
+          },
+          {
+            "Title": "SSR Wheelchair Sample",
+            "Amount": 0,
+            "SegmentId": "s001",
+            "PassengerId": "p002",
+            "Currency": "USD"
+          },
+          {
+            "Title": "SSR Wheelchair Sample",
+            "Amount": 0,
+            "SegmentId": "s002",
+            "PassengerId": "p002",
+            "Currency": "USD"
+          }
+        ],
+        "BasePrice": 20000,
+        "Tax": 0,
+        "TotalPrice": 21597,
+        "Currency": "USD"
+      }
+    ]
+  }
+} 

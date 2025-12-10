@@ -1,0 +1,297 @@
+{
+  "ReservationOrder": {
+    "GatewayType": "Midtrans",
+    "PaymentType": "WLTGopay",
+    "CustomerDetail": {
+      "Number": "generated-customer-id",
+      "FirstName": "John",
+      "LastName": "Doe",
+      "Email": "john@doe.com",
+      "Phone": "081234567890",
+      "BillingAddress": {
+        "FirstName": "John",
+        "LastName": "Doe",
+        "Phone": "081234567890",
+        "Address": "Baker Street 97th",
+        "City": "Jakarta",
+        "Postcode": "16000",
+        "CountryCode": "IDN"
+      }
+    },
+    "OrderType": "Reservation",
+    "Message": "Here's your reservation details.",
+    "Locale": "en-GB",
+    "TransactionDetails": {
+      "OrderID": "generated-order-id",
+      "GrossAmt": 430000
+    },
+    "BookingStatus": "Confirmed",
+    "CancellationPolicy": {
+      "Refundable": true,
+      "CancellationDeadline": "2024-01-01T18:00:00Z",
+      "RefundPercentage": 100
+    },
+    "SpecialRequests": ["Wheelchair accessible", "Vegetarian meals"],
+    "EmergencyContact": {
+      "Name": "Jane Doe",
+      "Phone": "081234567891",
+      "Relationship": "Spouse"
+    },
+    "Items": [
+      {
+        "ReservationNumber": "HTL-0001",
+        "MerchantName": "Hotel RedRibbon",
+        "ReservationType": "Hotel",
+        "GuestInfo": [
+          {
+            "GuestId": "p001",
+            "Name": "Farbound Smith Jr"
+          },
+          {
+            "GuestId": "p002",
+            "Name": "Nick Jones"
+          }
+        ],
+        "ReservationInfo": [
+          {
+            "RoomType": "Luxuries King",
+            "StaySchedule": {
+              "CheckInDateTime": "2024-01-02T14:00:00Z",
+              "CheckOutDateTime": "2024-01-04T11:00:00Z",
+              "Duration": 2
+            }
+          }
+        ],
+        "ProductInfo": [
+          {
+            "Title": "addon bed package",
+            "Value": "medium bed"
+          },
+          {
+            "Title": "addon towel",
+            "Value": "towel small"
+          }
+        ],
+        "PriceInfo": [
+          {
+            "Title": "addon bed package",
+            "Amount": 20000,
+            "Currency": "IDR"
+          },
+          {
+            "Title": "addon towel",
+            "Amount": 10000,
+            "Currency": "IDR"
+          },
+          {
+            "Title": "Deposit",
+            "Amount": 200000,
+            "Currency": "IDR"
+          }
+        ],
+        "BasePrice": 200000,
+        "Tax": 0,
+        "TotalPrice": 430000,
+        "Currency": "IDR",
+        "RoomCapacity": {
+          "Adults": 2,
+          "Children": 1,
+          "Infants": 0
+        }
+      },
+      {
+        "ReservationNumber": "RST-0001",
+        "MerchantName": "Fine Dining Restaurant",
+        "ReservationType": "Restaurant",
+        "GuestInfo": [
+          {
+            "GuestId": "p001",
+            "Name": "John Doe"
+          }
+        ],
+        "ReservationInfo": [
+          {
+            "TableType": "Window Seat",
+            "ReservationSchedule": {
+              "ReservationDateTime": "2024-01-15T19:00:00Z",
+              "Duration": 2
+            },
+            "SeatingCapacity": 4
+          }
+        ],
+        "ProductInfo": [
+          {
+            "Title": "Special Occasion",
+            "Value": "Birthday celebration"
+          },
+          {
+            "Title": "Dietary Requirements",
+            "Value": "Vegetarian options"
+          }
+        ],
+        "PriceInfo": [
+          {
+            "Title": "Reservation Fee",
+            "Amount": 50000,
+            "Currency": "IDR"
+          },
+          {
+            "Title": "Special Setup",
+            "Amount": 25000,
+            "Currency": "IDR"
+          }
+        ],
+        "BasePrice": 0,
+        "Tax": 0,
+        "TotalPrice": 75000,
+        "Currency": "IDR",
+        "TableCapacity": {
+          "Adults": 2,
+          "Children": 0,
+          "Infants": 0
+        }
+      },
+      {
+        "ReservationNumber": "VNU-0001",
+        "MerchantName": "Grand Ballroom Venue",
+        "ReservationType": "Venue",
+        "GuestInfo": [
+          {
+            "GuestId": "p001",
+            "Name": "John Doe"
+          }
+        ],
+        "ReservationInfo": [
+          {
+            "VenueType": "Wedding Reception",
+            "ReservationSchedule": {
+              "StartDateTime": "2024-06-15T18:00:00Z",
+              "EndDateTime": "2024-06-15T23:00:00Z",
+              "Duration": 5
+            },
+            "VenueCapacity": 200
+          }
+        ],
+        "ProductInfo": [
+          {
+            "Title": "Catering Package",
+            "Value": "Premium buffet"
+          },
+          {
+            "Title": "Audio Visual",
+            "Value": "Full sound system + projector"
+          },
+          {
+            "Title": "Decoration",
+            "Value": "Elegant floral arrangement"
+          }
+        ],
+        "PriceInfo": [
+          {
+            "Title": "Venue Rental",
+            "Amount": 5000000,
+            "Currency": "IDR"
+          },
+          {
+            "Title": "Catering Package",
+            "Amount": 2000000,
+            "Currency": "IDR"
+          },
+          {
+            "Title": "Audio Visual",
+            "Amount": 500000,
+            "Currency": "IDR"
+          },
+          {
+            "Title": "Decoration",
+            "Amount": 1000000,
+            "Currency": "IDR"
+          }
+        ],
+        "BasePrice": 5000000,
+        "Tax": 500000,
+        "TotalPrice": 8500000,
+        "Currency": "IDR",
+        "ExpectedGuests": {
+          "Adults": 150,
+          "Children": 20,
+          "Infants": 5
+        }
+      },
+      {
+        "ReservationNumber": "ACT-0001",
+        "MerchantName": "Adventure Tours Indonesia",
+        "ReservationType": "Activity",
+        "GuestInfo": [
+          {
+            "GuestId": "p001",
+            "Name": "John Doe"
+          },
+          {
+            "GuestId": "p002",
+            "Name": "Jane Doe"
+          }
+        ],
+        "ReservationInfo": [
+          {
+            "ActivityType": "Mountain Hiking",
+            "ReservationSchedule": {
+              "StartDateTime": "2024-02-10T06:00:00Z",
+              "EndDateTime": "2024-02-10T18:00:00Z",
+              "Duration": 12
+            },
+            "Location": {
+              "Address": "Mount Bromo, East Java",
+              "MeetingPoint": "Bromo Tengger Semeru National Park Entrance"
+            }
+          }
+        ],
+        "ProductInfo": [
+          {
+            "Title": "Equipment Rental",
+            "Value": "Hiking gear + safety equipment"
+          },
+          {
+            "Title": "Guide Service",
+            "Value": "Professional mountain guide"
+          },
+          {
+            "Title": "Transportation",
+            "Value": "Round trip from Surabaya"
+          }
+        ],
+        "PriceInfo": [
+          {
+            "Title": "Activity Fee",
+            "Amount": 800000,
+            "Currency": "IDR"
+          },
+          {
+            "Title": "Equipment Rental",
+            "Amount": 150000,
+            "Currency": "IDR"
+          },
+          {
+            "Title": "Guide Service",
+            "Amount": 200000,
+            "Currency": "IDR"
+          },
+          {
+            "Title": "Transportation",
+            "Amount": 300000,
+            "Currency": "IDR"
+          }
+        ],
+        "BasePrice": 800000,
+        "Tax": 0,
+        "TotalPrice": 1450000,
+        "Currency": "IDR",
+        "ParticipantCapacity": {
+          "Adults": 2,
+          "Children": 0,
+          "Infants": 0
+        }
+      }
+    ]
+  }
+}

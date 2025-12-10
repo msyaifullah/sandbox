@@ -1,0 +1,157 @@
+{
+  "ReservationOrder": {
+    "GatewayType": "Midtrans",
+    "PaymentType": "WLTGopay",
+    "CustomerDetail": {
+      "Number": "generated-customer-id",
+      "FirstName": "John",
+      "LastName": "Doe",
+      "Email": "john@doe.com",
+      "Phone": "081234567890",
+      "BillingAddress": {
+        "FirstName": "John",
+        "LastName": "Doe",
+        "Phone": "081234567890",
+        "Address": "Baker Street 97th",
+        "City": "Jakarta",
+        "Postcode": "16000",
+        "CountryCode": "IDN"
+      }
+    },
+    "OrderType": "Reservation",
+    "Message": "Here's your reservation details.",
+    "Locale": "en-GB",
+    "TransactionDetails": {
+      "OrderID": "generated-order-id",
+      "GrossAmt": 505000,
+      "Currency": "IDR"
+    },
+    "BookingStatus": "Confirmed",
+    "CancellationPolicy": {
+      "Refundable": true,
+      "CancellationDeadline": "2024-01-01T18:00:00Z",
+      "RefundPercentage": 100
+    },
+    "SpecialRequests": ["Wheelchair accessible", "Vegetarian meals"],
+    "EmergencyContact": {
+      "Name": "Jane Doe",
+      "Phone": "081234567891",
+      "Relationship": "Spouse"
+    },
+    "Items": [
+      {
+        "ReservationNumber": "HTL-0001",
+        "MerchantName": "Hotel RedRibbon",
+        "ReservationType": "Hotel",
+        "GuestInfo": [
+          {
+            "GuestId": "p001",
+            "Name": "Farbound Smith Jr"
+          },
+          {
+            "GuestId": "p002",
+            "Name": "Nick Jones"
+          }
+        ],
+        "ReservationInfo": [
+          {
+            "RoomType": "Luxuries King",
+            "StaySchedule": {
+              "CheckInDateTime": "2024-01-02T14:00:00Z",
+              "CheckOutDateTime": "2024-01-04T11:00:00Z",
+              "Duration": 2
+            }
+          }
+        ],
+        "ProductInfo": [
+          {
+            "Title": "addon bed package",
+            "Value": "medium bed"
+          },
+          {
+            "Title": "addon towel",
+            "Value": "towel small"
+          }
+        ],
+        "PriceInfo": [
+          {
+            "Title": "addon bed package",
+            "Amount": 20000,
+            "Currency": "IDR"
+          },
+          {
+            "Title": "addon towel",
+            "Amount": 10000,
+            "Currency": "IDR"
+          },
+          {
+            "Title": "Deposit",
+            "Amount": 200000,
+            "Currency": "IDR"
+          }
+        ],
+        "BasePrice": 200000,
+        "Tax": 0,
+        "TotalPrice": 430000,
+        "Currency": "IDR",
+        "RoomCapacity": {
+          "Adults": 2,
+          "Children": 1,
+          "Infants": 0
+        }
+      },
+      {
+        "ReservationNumber": "RST-0001",
+        "MerchantName": "Fine Dining Restaurant",
+        "ReservationType": "Restaurant",
+        "GuestInfo": [
+          {
+            "GuestId": "p001",
+            "Name": "John Doe"
+          }
+        ],
+        "ReservationInfo": [
+          {
+            "TableType": "Window Seat",
+            "ReservationSchedule": {
+              "ReservationDateTime": "2024-01-15T19:00:00Z",
+              "Duration": 2
+            },
+            "SeatingCapacity": 4
+          }
+        ],
+        "ProductInfo": [
+          {
+            "Title": "Special Occasion",
+            "Value": "Birthday celebration"
+          },
+          {
+            "Title": "Dietary Requirements",
+            "Value": "Vegetarian options"
+          }
+        ],
+        "PriceInfo": [
+          {
+            "Title": "Reservation Fee",
+            "Amount": 50000,
+            "Currency": "IDR"
+          },
+          {
+            "Title": "Special Setup",
+            "Amount": 25000,
+            "Currency": "IDR"
+          }
+        ],
+        "BasePrice": 0,
+        "Tax": 0,
+        "TotalPrice": 75000,
+        "Currency": "IDR",
+        "TableCapacity": {
+          "Adults": 2,
+          "Children": 0,
+          "Infants": 0
+        }
+      }
+    ]
+  }
+} 

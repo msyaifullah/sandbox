@@ -1,0 +1,221 @@
+{
+  "ProductOrder": {
+    "GatewayType": "Midtrans",
+    "PaymentType": "WLTGopay",
+    "CustomerDetail": {
+      "Number": "generated-customer-id",
+      "FirstName": "John",
+      "LastName": "Doe",
+      "Email": "john@doe.com",
+      "Phone": "081234567890",
+      "BillingAddress": {
+        "FirstName": "John",
+        "LastName": "Doe",
+        "Phone": "081234567890",
+        "Address": "Baker Street 97th",
+        "City": "Jakarta",
+        "Postcode": "16000",
+        "CountryCode": "IDN"
+      },
+      "ShippingAddress": {
+        "FirstName": "John",
+        "LastName": "Doe",
+        "Phone": "081234567890",
+        "Address": "Baker Street 97th",
+        "City": "Jakarta",
+        "Postcode": "16000",
+        "CountryCode": "IDN"
+      }
+    },
+    "OrderType": "Product",
+    "Message": "Here's your product details.",
+    "Locale": "en-GB",
+    "TransactionDetails": {
+      "OrderID": "generated-order-id",
+      "GrossAmt": 628500,
+      "Currency": "IDR",
+      "OrderLevelDiscounts": [
+        {
+          "Title": "Flash Sale Discount",
+          "Amount": -50000,
+          "Currency": "IDR",
+          "Type": "percentage",
+          "Value": 10
+        }
+      ]
+    },
+    "Items": [
+      {
+        "ProductNumber": "JCK-0001",
+        "MerchantID": "MERCH001",
+        "MerchantName": "Merchant01",
+        "MerchantContact": {
+          "Email": "support@merchant01.com",
+          "Phone": "021-1234567",
+          "Address": "Jl. Sudirman No. 123, Jakarta"
+        },
+        "Name": "Jacket Running",
+        "Qty": 1,
+        "Brand": "Brandy.Co",
+        "Category": "Sport,Men",
+        "ProductInfo": [
+          {
+            "Title": "Color",
+            "Value": "Black"
+          },
+          {
+            "Title": "Size",
+            "Value": "M"
+          }
+        ],
+        "PriceInfo": [
+          {
+            "Title": "Discounts Raya",
+            "Amount": -20000,
+            "Currency": "IDR"
+          },
+          {
+            "Title": "Size M",
+            "Amount": 10000,
+            "Currency": "IDR"
+          }
+        ],
+        "BasePrice": 200000,
+        "Tax": 19000,
+        "TotalPrice": 224000,
+        "Currency": "IDR",
+        "ShippingDetails": {
+          "Method": "Standard Delivery",
+          "Cost": 15000,
+          "EstimatedDays": "3-5",
+          "TrackingNumber": null
+        }
+      },
+      {
+        "ProductNumber": "SNK-0001",
+        "MerchantID": "MERCH002",
+        "MerchantName": "Merchant02",
+        "MerchantContact": {
+          "Email": "support@merchant02.com",
+          "Phone": "021-7654321",
+          "Address": "Jl. Thamrin No. 456, Jakarta"
+        },
+        "Name": "Running Shoes",
+        "Qty": 1,
+        "Brand": "SportMax",
+        "Category": "Sport,Footwear",
+        "ProductInfo": [
+          {
+            "Title": "Color",
+            "Value": "White"
+          },
+          {
+            "Title": "Size",
+            "Value": "42"
+          }
+        ],
+        "PriceInfo": [
+          {
+            "Title": "Seasonal Sale",
+            "Amount": -30000,
+            "Currency": "IDR"
+          }
+        ],
+        "BasePrice": 350000,
+        "Tax": 32000,
+        "TotalPrice": 377000,
+        "Currency": "IDR",
+        "ShippingDetails": {
+          "Method": "Express Delivery",
+          "Cost": 25000,
+          "EstimatedDays": "1-2",
+          "TrackingNumber": null
+        }
+      },
+      {
+        "ProductNumber": "SOC-0001",
+        "MerchantID": "MERCH002",
+        "MerchantName": "Merchant02",
+        "MerchantContact": {
+          "Email": "support@merchant02.com",
+          "Phone": "021-7654321",
+          "Address": "Jl. Thamrin No. 456, Jakarta"
+        },
+        "Name": "Sports Socks",
+        "Qty": 2,
+        "Brand": "SportMax",
+        "Category": "Sport,Accessories",
+        "ProductInfo": [
+          {
+            "Title": "Color",
+            "Value": "Black"
+          },
+          {
+            "Title": "Size",
+            "Value": "M"
+          }
+        ],
+        "PriceInfo": [],
+        "BasePrice": 25000,
+        "Tax": 2500,
+        "TotalPrice": 77500,
+        "Currency": "IDR",
+        "ShippingDetails": {
+          "Method": "Express Delivery",
+          "Cost": 25000,
+          "EstimatedDays": "1-2",
+          "TrackingNumber": null
+        }
+      }
+    ],
+    "OrderSummary": {
+      "TotalItems": 3,
+      "TotalMerchants": 2,
+      "Subtotal": 628500,
+      "TotalShipping": 65000,
+      "TotalTax": 53500,
+      "TotalDiscounts": -50000,
+      "GrandTotal": 628500,
+      "MerchantDiscounts": [
+        {
+          "MerchantID": "MERCH001",
+          "MerchantName": "Merchant01",
+          "Discounts": [
+            {
+              "Title": "Merchant01 Special Discount",
+              "Amount": -10000,
+              "Currency": "IDR"
+            }
+          ]
+        },
+        {
+          "MerchantID": "MERCH002",
+          "MerchantName": "Merchant02",
+          "Discounts": []
+        }
+      ],
+      "MerchantSummary": [
+        {
+          "MerchantID": "MERCH001",
+          "MerchantName": "Merchant01",
+          "ItemCount": 1,
+          "Subtotal": 214000,
+          "ShippingCost": 15000,
+          "Tax": 19000,
+          "Discounts": -10000,
+          "TotalAmount": 238000
+        },
+        {
+          "MerchantID": "MERCH002",
+          "MerchantName": "Merchant02",
+          "ItemCount": 2,
+          "Subtotal": 454500,
+          "ShippingCost": 50000,
+          "Tax": 34500,
+          "Discounts": -30000,
+          "TotalAmount": 504500
+        }
+      ]
+    }
+  }
+} 

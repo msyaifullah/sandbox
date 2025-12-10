@@ -1,0 +1,234 @@
+{
+  "ServiceOrder": {
+    "GatewayType": "Midtrans",
+    "PaymentType": "WLTGopay",
+    "CustomerDetail": {
+      "Number": "generated-customer-id",
+      "FirstName": "John",
+      "LastName": "Doe",
+      "Email": "john@doe.com",
+      "Phone": "081234567890",
+      "BillingAddress": {
+        "FirstName": "John",
+        "LastName": "Doe",
+        "Phone": "081234567890",
+        "Address": "Baker Street 97th",
+        "City": "Jakarta",
+        "Postcode": "16000",
+        "CountryCode": "IDN"
+      }
+    },
+    "OrderType": "Service",
+    "Message": "Here's your services details.",
+    "Locale": "en-GB",
+    "OrderStatus": "Pending",
+    "TransactionDetails": {
+      "OrderID": "generated-order-id",
+      "GrossAmt": 585000,
+      "Currency": "RP"
+    },
+    "ServiceProviders": [
+      {
+        "ProviderID": "SP001",
+        "Name": "Pak Joko Cleaner",
+        "Contact": {
+          "Phone": "081234567890",
+          "Email": "pakjoko@cleaner.com",
+          "Address": "Jl. Sudirman No. 123, Jakarta"
+        },
+        "Rating": 4.5,
+        "Specialization": ["Cleaning", "Gardening"]
+      },
+      {
+        "ProviderID": "SP002",
+        "Name": "Budi Electrician",
+        "Contact": {
+          "Phone": "081234567891",
+          "Email": "budi@electrician.com",
+          "Address": "Jl. Thamrin No. 456, Jakarta"
+        },
+        "Rating": 4.8,
+        "Specialization": ["Electrical", "Installation"]
+      }
+    ],
+    "Items": [
+      {
+        "ItemID": "SVC001",
+        "MerchantName": "Pak Joko Cleaner",
+        "ProviderID": "SP001",
+        "Name": "Cleaning Garden",
+        "Category": "Cleaning",
+        "SubCategory": "Garden Maintenance",
+        "Status": "Scheduled",
+        "Priority": "Normal",
+        "Description": "Complete garden cleaning and maintenance service",
+        "ServiceInfo": [
+          {
+            "ServiceType": "hours",
+            "Duration": 2,
+            "ServiceSchedule": {
+              "CheckInTime": "2016-01-02T19:45",
+              "CheckOutTime": "2016-01-02T21:45",
+              "EstimatedDuration": "2 hours"
+            }
+          }
+        ],
+        "Location": {
+          "Address": "Baker Street 97th",
+          "City": "Jakarta",
+          "Postcode": "16000",
+          "CountryCode": "IDN",
+          "Coordinates": {
+            "Latitude": -6.2088,
+            "Longitude": 106.8456
+          },
+          "AccessNotes": "Gate code: 1234, Parking available"
+        },
+        "ProductInfo": [
+          {
+            "Title": "Garden Tools",
+            "Value": "Professional garden cleaning tools",
+            "Category": "Equipment",
+            "AddonID": "ADD001",
+            "Required": false,
+            "Selected": true
+          },
+          {
+            "Title": "Fertilizer Application",
+            "Value": "Apply organic fertilizer to plants",
+            "Category": "Service",
+            "AddonID": "ADD002",
+            "Required": false,
+            "Selected": false
+          }
+        ],
+        "PriceInfo": [
+          {
+            "Title": "Garden Tools",
+            "Amount": 10000,
+            "Currency": "RP",
+            "AddonID": "ADD001"
+          },
+          {
+            "Title": "Fertilizer Application",
+            "Amount": 25000,
+            "Currency": "RP",
+            "AddonID": "ADD002"
+          }
+        ],
+        "BasePrice": 200000,
+        "Tax": 0,
+        "Discount": {
+          "Type": "Percentage",
+          "Value": 10,
+          "Reason": "First time customer"
+        },
+        "TotalPrice": 210000,
+        "Currency": "RP",
+        "PaymentSchedule": {
+          "Type": "Full Payment",
+          "AdvancePayment": 0,
+          "RemainingPayment": 210000
+        },
+        "Requirements": {
+          "CustomerPreparation": [
+            "Clear garden area",
+            "Provide access to water source"
+          ],
+          "ProviderEquipment": [
+            "Cleaning tools",
+            "Safety equipment"
+          ],
+          "SpecialInstructions": "Service will be performed during daylight hours only"
+        },
+        "CancellationPolicy": {
+          "FreeCancellationHours": 24,
+          "PartialRefundHours": 12,
+          "NoRefundHours": 2
+        }
+      },
+      {
+        "ItemID": "SVC002",
+        "MerchantName": "Budi Electrician",
+        "ProviderID": "SP002",
+        "Name": "Electrical Installation",
+        "Category": "Electrical",
+        "SubCategory": "Installation",
+        "Status": "Pending",
+        "Priority": "High",
+        "Description": "Install new electrical outlets in living room",
+        "ServiceInfo": [
+          {
+            "ServiceType": "installation",
+            "Duration": 3,
+            "ServiceSchedule": {
+              "CheckInTime": "2016-01-03T10:00",
+              "CheckOutTime": "2016-01-03T13:00",
+              "EstimatedDuration": "3 hours"
+            }
+          }
+        ],
+        "Location": {
+          "Address": "Baker Street 97th",
+          "City": "Jakarta",
+          "Postcode": "16000",
+          "CountryCode": "IDN",
+          "Coordinates": {
+            "Latitude": -6.2088,
+            "Longitude": 106.8456
+          },
+          "AccessNotes": "Main entrance, Living room area"
+        },
+        "ProductInfo": [
+          {
+            "Title": "Premium Outlets",
+            "Value": "High-quality electrical outlets with USB ports",
+            "Category": "Equipment",
+            "AddonID": "ADD003",
+            "Required": false,
+            "Selected": true
+          }
+        ],
+        "PriceInfo": [
+          {
+            "Title": "Premium Outlets",
+            "Amount": 50000,
+            "Currency": "RP",
+            "AddonID": "ADD003"
+          }
+        ],
+        "BasePrice": 350000,
+        "Tax": 0,
+        "Discount": {
+          "Type": "Fixed",
+          "Value": 25000,
+          "Reason": "Bulk service discount"
+        },
+        "TotalPrice": 375000,
+        "Currency": "RP",
+        "PaymentSchedule": {
+          "Type": "Partial Payment",
+          "AdvancePayment": 150000,
+          "RemainingPayment": 225000
+        },
+        "Requirements": {
+          "CustomerPreparation": [
+            "Clear work area",
+            "Ensure power is available"
+          ],
+          "ProviderEquipment": [
+            "Electrical tools",
+            "Safety equipment",
+            "Testing equipment"
+          ],
+          "SpecialInstructions": "Service requires power shutdown for 30 minutes"
+        },
+        "CancellationPolicy": {
+          "FreeCancellationHours": 48,
+          "PartialRefundHours": 24,
+          "NoRefundHours": 4
+        }
+      }
+    ]
+  }
+}
