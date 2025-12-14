@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { StreamingMethod, TripType } from '../types';
+import { StreamingMethod, TripType, Airport } from '../types';
+import AirportAutocomplete from './AirportAutocomplete';
 
 interface FlightSearchFormProps {
   onSearch: (
@@ -15,16 +16,18 @@ interface FlightSearchFormProps {
 }
 
 const FlightSearchForm: React.FC<FlightSearchFormProps> = ({ onSearch, isSearching }) => {
+  // Get today's date in YYYY-MM-DD format for min date
+  const today = new Date().toISOString().split('T')[0];
+
   const [from, setFrom] = useState('');
   const [to, setTo] = useState('');
+  const [fromAirport, setFromAirport] = useState<Airport | null>(null);
+  const [toAirport, setToAirport] = useState<Airport | null>(null);
   const [tripType, setTripType] = useState<TripType>('one-way');
-  const [departureDate, setDepartureDate] = useState('');
+  const [departureDate, setDepartureDate] = useState(today);
   const [returnDate, setReturnDate] = useState('');
   const [pax, setPax] = useState(1);
   const [streamingMethod, setStreamingMethod] = useState<StreamingMethod>('websocket');
-
-  // Get today's date in YYYY-MM-DD format for min date
-  const today = new Date().toISOString().split('T')[0];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -47,27 +50,32 @@ const FlightSearchForm: React.FC<FlightSearchFormProps> = ({ onSearch, isSearchi
       <form onSubmit={handleSubmit}>
         <div className="form-row">
           <div className="form-group">
-            <label htmlFor="from">From:</label>
-            <input
-              type="text"
+            <AirportAutocomplete
               id="from"
+              label="From:"
               value={from}
-              onChange={(e) => setFrom(e.target.value)}
-              placeholder="Enter departure city"
+              onChange={(code, airport) => {
+                setFrom(code);
+                setFromAirport(airport);
+              }}
+              placeholder="Search departure airport..."
               disabled={isSearching}
               required
             />
           </div>
           <div className="form-group">
-            <label htmlFor="to">To:</label>
-            <input
-              type="text"
+            <AirportAutocomplete
               id="to"
+              label="To:"
               value={to}
-              onChange={(e) => setTo(e.target.value)}
-              placeholder="Enter destination city"
+              onChange={(code, airport) => {
+                setTo(code);
+                setToAirport(airport);
+              }}
+              placeholder="Search destination airport..."
               disabled={isSearching}
               required
+              origin={from || undefined}
             />
           </div>
         </div>
