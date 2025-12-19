@@ -97,4 +97,23 @@ export interface StreamingMessage {
   last_seen_index?: number;
 }
 
-export type StreamingMethod = 'websocket' | 'longpoll' | 'sse'; 
+export type StreamingMethod = 'websocket' | 'longpoll' | 'sse';
+
+export interface Airport {
+  code: string;
+  name: string;
+  city: string;
+  country: string;
+  country_code: string;
+  is_major: boolean;
+  region: string;
+}
+
+export interface AirportSearchResponse {
+  total: number;
+  airports?: Airport[];
+  destinations?: Airport[];
+  origin?: string;
+  keyword?: string;
+  message?: string;
+} 

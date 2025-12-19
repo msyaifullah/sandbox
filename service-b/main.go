@@ -80,6 +80,9 @@ func main() {
 	r.POST("/api/search/cancel", CancelHandler)
 	r.GET("/ws/result/stream", WebSocketHandler)
 
+	// Airport search endpoint
+	r.GET("/api/airports", AirportSearchHandler)
+
 	// Long polling endpoint for results
 	r.GET("/api/result/longpoll", LongPollHandler)
 
@@ -132,6 +135,59 @@ func main() {
 	})
 
 	r.Run(":3001")
+}
+
+// === Airport Search Endpoint ===
+func AirportSearchHandler(c *gin.Context) {
+	origin := c.Query("origin")
+	keyword := c.Query("key") // Support "key" parameter for keyword search
+	if keyword == "" {
+		keyword = c.Query("q") // Also support "q" parameter
+	}
+
+	// If no origin is specified, return all airports (with optional keyword filter)
+	if origin == "" {
+		airports := GetAllAirports()
+
+		// Apply keyword filter if provided
+		if keyword != "" {
+			airports = FilterAirportsByKeyword(airports, keyword)
+		}
+
+		c.JSON(http.StatusOK, gin.H{
+			"total":    len(airports),
+			"airports": airports,
+			"keyword":  keyword,
+		})
+		return
+	}
+
+	// If origin is specified, return available destinations
+	destinations := GetAvailableDestinations(origin)
+
+	// If no destinations found, it might be an invalid origin
+	if len(destinations) == 0 {
+		c.JSON(http.StatusOK, gin.H{
+			"origin":       origin,
+			"total":        0,
+			"destinations": []AirportData{},
+			"keyword":      keyword,
+			"message":      "No destinations found for the specified origin or invalid origin code",
+		})
+		return
+	}
+
+	// Apply keyword filter to destinations if provided
+	if keyword != "" {
+		destinations = FilterAirportsByKeyword(destinations, keyword)
+	}
+
+	c.JSON(http.StatusOK, gin.H{
+		"origin":       origin,
+		"total":        len(destinations),
+		"destinations": destinations,
+		"keyword":      keyword,
+	})
 }
 
 // === Flight Search REST Endpoints ===
