@@ -13,16 +13,18 @@
     </parent>
 
     <groupId>com.kjl</groupId>
-    <artifactId>service-java</artifactId>
+    <artifactId>service-java-graalvm</artifactId>
     <version>1.0.0</version>
-    <name>Service Java</name>
-    <description>Spring Boot service with invoice validation and flight search</description>
+    <name>Service Java GraalVM</name>
+    <description>Spring Boot service with invoice validation and flight search - GraalVM Native Image</description>
 
     <properties>
-        <java.version>21</java.version>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
+        <java.version>17</java.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <graalvm.version>17.0.9</graalvm.version>
+        <native.maven.plugin.version>0.10.1</native.maven.plugin.version>
     </properties>
 
     <dependencies>
@@ -100,6 +102,33 @@
                             <artifactId>lombok</artifactId>
                         </exclude>
                     </excludes>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.graalvm.buildtools</groupId>
+                <artifactId>native-maven-plugin</artifactId>
+                <version>${native.maven.plugin.version}</version>
+                <extensions>true</extensions>
+                <executions>
+                    <execution>
+                        <id>test-native</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>test</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <mainClass>com.kjl.servicejava.ServiceJavaApplication</mainClass>
+                    <imageName>${project.artifactId}</imageName>
+                    <skip>false</skip>
+                    <buildArgs>
+                        <buildArg>-H:+ReportExceptionStackTraces</buildArg>
+                        <buildArg>-H:+AddAllCharsets</buildArg>
+                        <buildArg>-H:IncludeResources=application.*\\.properties</buildArg>
+                        <buildArg>--initialize-at-run-time=io.lettuce.core</buildArg>
+                        <buildArg>--initialize-at-run-time=org.springframework.data.redis</buildArg>
+                    </buildArgs>
                 </configuration>
             </plugin>
         </plugins>
