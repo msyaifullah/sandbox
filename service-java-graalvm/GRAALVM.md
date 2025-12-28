@@ -4,19 +4,21 @@ This project is configured to build a GraalVM Native Image executable for improv
 
 ## Prerequisites
 
-1. **GraalVM JDK 21** - Install GraalVM JDK 21 or higher
+1. **GraalVM JDK 25** - Install GraalVM JDK 25 or higher
    
-   **Option 1: Using Homebrew (macOS, recommended)**
+   **Option 1: Using SDKMAN (recommended)**
    ```bash
-   brew install --cask graalvm-jdk@21
-   export JAVA_HOME=$(/usr/libexec/java_home -v 21)
-   export PATH=$JAVA_HOME/bin:$PATH
+   source ~/.sdkman/bin/sdkman-init.sh
+   sdk install java 25.0.1-graalce
+   sdk use java 25.0.1-graalce
+   gu install native-image
    ```
    
-   **Option 2: Using SDKMAN**
+   **Option 2: Using Homebrew (macOS)**
    ```bash
-   sdk install java 21.0.1-graal
-   sdk use java 21.0.1-graal
+   brew install --cask graalvm-jdk@25
+   export JAVA_HOME=$(/usr/libexec/java_home -v 25)
+   export PATH=$JAVA_HOME/bin:$PATH
    ```
    
    **Option 3: Manual Download**
@@ -133,17 +135,14 @@ ld: symbol(s) not found for architecture arm64
 
 **Solutions**:
 
-1. **Use Java 17 instead of Java 21** (Recommended for now):
+1. **Use Java 25** (Recommended):
    ```bash
-   # Install GraalVM with Java 17
-   sdk install java 17.0.9-graalce
-   sdk use java 17.0.9-graalce
+   # Install GraalVM with Java 25
+   sdk install java 25.0.1-graalce
+   sdk use java 25.0.1-graalce
    
-   # Update pom.xml to use Java 17
-   <java.version>17</java.version>
+   # pom.xml is already configured for Java 25
    ```
-
-2. **Wait for GraalVM updates**: Newer versions of GraalVM may have better Java 21 support.
 
 3. **Use regular JAR instead of native image**: For now, you can use the regular Spring Boot JAR:
    ```bash

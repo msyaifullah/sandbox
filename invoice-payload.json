@@ -1,0 +1,68 @@
+{
+  "order_type": "Product",
+  "order_id": "order-123",
+  "customer": {
+    "customer_id": "cust-001",
+    "name": "John Doe",
+    "email": "john@example.com",
+    "phone": "+1234567890",
+    "billing_address": {
+      "street": "123 Main St",
+      "city": "Jakarta",
+      "state": "DKI Jakarta",
+      "postal_code": "10110",
+      "country": "Indonesia"
+    },
+    "shipping_address": {
+      "street": "123 Main St",
+      "city": "Jakarta",
+      "state": "DKI Jakarta",
+      "postal_code": "10110",
+      "country": "Indonesia"
+    }
+  },
+  "merchants": [
+    {
+      "merchant_id": "merchant-001",
+      "merchant_name": "Shop A",
+      "items": [
+        {
+          "item_id": "item-1",
+          "name": "Product A",
+          "quantity": 2,
+          "price_info": {
+            "base_price": 100000,
+            "discount": 0,
+            "tax": 11000,
+            "shipping": 15000
+          }
+        },
+        {
+          "item_id": "item-2",
+          "name": "Product B",
+          "quantity": 1,
+          "price_info": {
+            "base_price": 200000,
+            "discount": -20000,
+            "tax": 19800,
+            "shipping": 20000
+          }
+        }
+      ]
+    }
+  ],
+  "transaction_details": {
+    "total_amount": 545800,
+    "currency": "IDR",
+    "payment_method": "credit_card",
+    "transaction_id": "txn-123"
+  },
+  "order_summary": {
+    "subtotal": 500000,
+    "total_tax": 30800,
+    "total_shipping": 35000,
+    "total_discounts": 20000,
+    "grand_total": 545800
+  }
+}
+

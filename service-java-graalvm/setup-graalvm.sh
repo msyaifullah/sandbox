@@ -17,7 +17,7 @@ if [ -d "$HOME/.sdkman" ]; then
     [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
     
     echo ""
-    echo "Installing GraalVM 21 via SDKMAN..."
+    echo "Installing GraalVM 25 via SDKMAN..."
     echo "If SDKMAN has connectivity issues, you can install manually:"
     echo ""
     echo "Manual installation steps:"
@@ -30,18 +30,18 @@ if [ -d "$HOME/.sdkman" ]; then
     
     # Try to install via SDKMAN (may fail if offline)
     if command -v sdk &> /dev/null; then
-        echo "Attempting to install GraalVM 21..."
-        sdk install java 21.0.1-graal || {
+        echo "Attempting to install GraalVM 25..."
+        sdk install java 25.0.1-graalce || {
             echo "⚠ SDKMAN installation failed (may be offline)"
             echo ""
             echo "Please install GraalVM manually:"
             echo "  Option 1: Download from https://www.graalvm.org/downloads/"
-            echo "  Option 2: Use Homebrew: brew install --cask graalvm-jdk@21"
+            echo "  Option 2: Use Homebrew: brew install --cask graalvm-jdk@25"
             exit 1
         }
         
         echo "Switching to GraalVM..."
-        sdk use java 21.0.1-graal
+        sdk use java 25.0.1-graalce
         
         echo ""
         echo "Installing native-image component..."
