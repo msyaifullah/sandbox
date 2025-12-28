@@ -23,7 +23,7 @@ This is a Spring Boot service with Maven that provides the same functionality as
 
 ## Prerequisites
 
-- Java 17 or higher
+- Java 21 or higher
 - Maven 3.6+
 - Redis server running on localhost:6379 (password: changeMe123)
 
