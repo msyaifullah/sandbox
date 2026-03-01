@@ -120,6 +120,29 @@ The following native image build arguments are configured:
 
 ## Troubleshooting
 
+### Error: Native Image requirements not met - Java 24 detected instead of Java 25
+
+**Problem**: Spring Boot 4.0.1 incorrectly detects Java 24 instead of Java 25 in native images:
+```
+Native Image requirements not met. Native Image must support at least Java 25 but Java 24 was detected
+```
+
+**Root Cause**: This is a **known bug in Spring Boot 4.0.1** where the Java version detection in native images incorrectly reports Java 24 when using Java 25.
+
+**Workarounds**:
+
+1. **Use Regular JAR** (Recommended until Spring Boot fix):
+   ```bash
+   mvn clean package
+   java -jar target/service-java-graalvm-1.0.0.jar
+   ```
+
+2. **Wait for Spring Boot Update**: This bug is expected to be fixed in a future Spring Boot 4.0.x release.
+
+3. **Use Spring Boot 3.3.6**: If native image is critical, consider temporarily using Spring Boot 3.3.6 which doesn't have this issue.
+
+**Note**: The native image builds successfully, but fails at runtime due to this Spring Boot 4.0.1 bug. The workaround in `ServiceJavaApplication.java` attempts to set system properties, but Spring Boot checks the version during static initialization before our code runs.
+
 ### Error: Undefined symbol ScopedMemoryAccess_closeScope0
 
 **Problem**: Linker error with `_Java_jdk_internal_misc_ScopedMemoryAccess_closeScope0` symbol not found.
